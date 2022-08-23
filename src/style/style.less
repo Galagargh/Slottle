@@ -1,0 +1,90 @@
+@bg: #e8e8e8;
+@brandPrimary: #fff;
+@brandSecondary: #000;
+
+body{
+  background-color: @bg;
+}
+
+canvas {
+  z-index:0;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+main{
+  height: 200px;
+  width: 100%;
+
+  .slot-container{
+    display: flex;
+  }
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: sticky;
+  height: 200px;
+  width: 100%;
+  bottom: 0px;
+
+  .paddle-container {
+    display: flex;
+  }
+}
+
+.paddle-button{
+  height: 50px;
+  width: 100px;
+}
+
+.paddle {
+  display: flex;
+  color: #fff;
+  letter-spacing: 2px;
+  background-color: #cb651f;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  border: 3px solid #e89933;
+  border-radius: 15px;
+}
+
+.slot {
+  display: flex;
+  color: @brandSecondary;
+  background-color: @brandPrimary;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  border: 3px solid #000;
+  border-radius: 15px;
+}
+
+.hover{
+  cursor: pointer;
+}
+
+.dragging{
+
+}
+
+.correct{
+  background-color: green;
+}
+
+.wrong{
+  background-color: red;
+}
+
+.dropped{
+  background-color: yellow;
+}

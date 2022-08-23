@@ -9,19 +9,37 @@
         <title>Slottle</title>
     </head>
     <body>
-    <div id="quiz-container">
-        <header class="title">
-            <h1>Slottle</h1>
-            <h2>Place the answers correctly</h2>
-        </header>
-        <canvas id="canvas"></canvas>
-        <main>
-            <div class="slot-container"></div>
-            <button class="paddle-button">Paddle State</button>
-        </main>
-        <aside>
-            <div class="paddle-container"></div>
-        </aside>
-    </div>
+        <div id="quiz-container">
+            <header class="title">
+                <h1>Slottle</h1>
+                <h2>Place the answers correctly</h2>
+            </header>
+<!--            <canvas id="canvas"></canvas>-->
+            <main>
+                <div class="intro-popup">
+
+                    <div class="close-btn">
+                    </div>
+
+                    <h2>Welcome to Slottle!</h2>
+                    <hr>
+
+                    <p>
+                        The aim of the game is to correctly sort the answers into each of their correct categories. Just
+                        touch and drag each of the corresponding paddles and drop them into the slots, then click the "Okay"
+                        button to see if you were correct!
+                        <br><br>
+                        <span style="font-style: italic;">- Good Luck! -</span>
+                    </p>
+                </div>
+
+                <div class="slot-container"></div>
+            </main>
+            <aside>
+                <div class="paddle-container">
+                </div>
+            </aside>
+            <button class="okay-button">Okay</button>
+        </div>
     </body>
 </html>

@@ -1,9 +1,13 @@
-@bg: #e8e8e8;
-@brandPrimary: #fff;
-@brandSecondary: #000;
+@import url('partials/variables');
+@import url('partials/type');
+@import url('partials/components');
+
+html {
+  height: 100%;
+}
 
 body{
-  background-color: @bg;
+  background-color: rgb(128, 153, 208);
 }
 
 canvas {
@@ -13,12 +17,21 @@ canvas {
   left:0px;
 }
 
+header{
+  text-align: center;
+}
+
 main{
   height: 200px;
   width: 100%;
+  position: absolute;
+  transform: translateY(50%);
 
   .slot-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
   }
 }
 
@@ -27,46 +40,31 @@ aside{
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  position: sticky;
-  height: 200px;
+  position: absolute;
+  height: auto;
+  padding: 25px 0;
   width: 100%;
   bottom: 0px;
+  background-color: white;
+  background: linear-gradient(to right bottom, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195));
+  left: 0;
+  z-index: 0;
 
   .paddle-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
   }
 }
 
-.paddle-button{
-  height: 50px;
-  width: 100px;
-}
-
-.paddle {
-  display: flex;
-  color: #fff;
-  letter-spacing: 2px;
-  background-color: #cb651f;
+footer{
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
   justify-content: center;
-  width: 245px;
-  height: 55px;
-  border: 3px solid #e89933;
-  border-radius: 15px;
-}
-
-.slot {
-  display: flex;
-  color: @brandSecondary;
-  background-color: @brandPrimary;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 245px;
-  height: 55px;
-  border: 3px solid #000;
-  border-radius: 15px;
+  position: absolute;
+  height: auto;
 }
 
 .hover{

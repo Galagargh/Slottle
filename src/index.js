@@ -49,7 +49,31 @@ let quizView = {
         }
     },
 
+    welcome :       $(function() {
+                        $('.intro-popup').show();
+
+                        gsap.fromTo('.intro-popup', { opacity: 0 }, { opacity: 1 });
+                        gsap.to('.intro-popup', {
+                            y : '-50',
+                        } )
+                    }),
+
     interaction :  $(function(){
+
+                    $(document).mouseup(function (e) {
+                        if ($(e.target).closest(".intro-popup").length
+                            === 0) {
+                            gsap.to('.intro-popup', {
+                                y : '50',
+                            } )
+                            gsap.fromTo('.intro-popup', { opacity: 1 }, { opacity: 0 });
+
+
+                            setTimeout(function() {
+                                $(".intro-popup").hide();
+                            }, 500);
+                        }
+                    });
 
                     $('.paddle').on( "drag", function( event, ui ) {
                         // console.log(quizController.getSlotState());
@@ -67,7 +91,7 @@ let quizView = {
                         }
                     });
 
-                    $('.paddle-button').on( 'click', function(){
+                    $('.okay-button').on( 'click', function(){
                         quizController.submit();
                     })
             })
@@ -118,10 +142,10 @@ let quizController = {
     showSubmit : function(boolean){
         switch (boolean) {
             case true:
-            $('.paddle-button').show();
+            $('.okay-button').show();
             break;
             case false:
-            $('.paddle-button').hide();
+            $('.okay-button').hide();
             break;
         }
     },
@@ -141,8 +165,6 @@ let quizController = {
 
         // use lodash function to compare two objects
         let check = isEqual(userAnswers, correctOrder);
-
-        // TODO: check which paddles are not in their correct slots
 
         if (check){
             alert('congrats');
@@ -186,6 +208,8 @@ let quizController = {
                             return index * 50;
                         }
                     } )
+                    $(`#${value}`).addClass('wrong');
+                    $('.slot').removeClass('dropped');
                 } else {
                     gsap.to(`#${value}`, { color : 'green' } )
                 }

@@ -17,7 +17,7 @@ export function paddle(value, text) {
     const paddle = document.createElement('div');
     paddle.classList.add('paddle');
     paddle.id = 'paddle' + value;
-    paddle.innerHTML = text;
+    paddle.innerHTML = `<p>${text}</p>`;
 
     $(function (){
         $('.paddle').hover(function() {
@@ -30,6 +30,7 @@ export function paddle(value, text) {
             snapTolerance: 90,
             cursor: 'pointer',
             classes: {'ui-draggable-dragging' : 'dragging'},
+
             drag: function( event, ui ) {
                 window.paddleState = 'dragging';
             },

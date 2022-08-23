@@ -7,6 +7,7 @@
 
 Slottle was built as part of a coding challenge using the following frameworks/technologies
 
+
 - jQuery
 - jQuery UI
 - Greensock GSAP

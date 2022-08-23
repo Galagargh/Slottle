@@ -1,0 +1,75 @@
+/*!*********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/style/style.less ***!
+  \*********************************************************************************************************************************************************/
+body {
+  background-color: #e8e8e8;
+}
+canvas {
+  z-index: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+main {
+  height: 200px;
+  width: 100%;
+}
+main .slot-container {
+  display: flex;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 200px;
+  width: 100%;
+  bottom: 0px;
+}
+aside .paddle-container {
+  display: flex;
+}
+.paddle-button {
+  height: 50px;
+  width: 100px;
+}
+.paddle {
+  display: flex;
+  color: #fff;
+  letter-spacing: 2px;
+  background-color: #cb651f;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  border: 3px solid #e89933;
+  border-radius: 15px;
+}
+.slot {
+  display: flex;
+  color: #000;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  border: 3px solid #000;
+  border-radius: 15px;
+}
+.hover {
+  cursor: pointer;
+}
+.correct {
+  background-color: green;
+}
+.wrong {
+  background-color: red;
+}
+.dropped {
+  background-color: yellow;
+}
+
